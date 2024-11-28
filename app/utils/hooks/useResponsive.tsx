@@ -37,7 +37,7 @@ const useResponsive = (query: string): boolean => {
                 matchMedia.removeEventListener('change', handleChange)
             }
         }
-    }, [query])
+    }, [query, handleChange])
     return matches;
 }
 

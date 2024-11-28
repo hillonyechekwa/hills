@@ -9,7 +9,7 @@ const NotFound = () => {
             <Hero>
                 <section className="border-r-4 border-r-foreground px-10">
                     <h4 className="text-lg font-[family-name:var(--font-gopher-bold-sans) text-wrap">
-                        Looks like this page hit a breakpoint... and we forgot to debug it. Don't worry, though! Hit the back button or let's refactor your route to get you where you need to go.
+                        Looks like this page hit a breakpoint... and we forgot to debug it. Don&apos;t worry, though! Hit the back button or let&apos;s refactor your route to get you where you need to go.
                     </h4>
                 </section>
             <Image

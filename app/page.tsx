@@ -9,17 +9,17 @@ export default function Home() {
           <section>
               <h1 className="flex flex-col text-8xl font-[family-name:var(--font-gopher-bold-sans)] border-r-4 border-foreground py-4 px-28">
                   <span className="">Hill</span>
-                  <span>Onyechkwa.</span>
+                  <span>Onyechekwa.</span>
               </h1>
           </section>
           <section className="flex flex-col items-center justify-evenly p-2 w-full h-full">
               <p className="grid grid-rows-[20px_20px] grid-cols-[400px] justify-self-center ">
-                  I'm a Hills, a software developer who loves turning ideas
-                  into sleek, functional web applications. Whether it's React, Node.js and Nest.js
-                  or diving into Rust or AWS, I'm all about building solutions that
+                  I&apos;m a Hills, a software developer who loves turning ideas
+                  into sleek, functional web applications. Whether it&apos;s React, Node.js and Nest.js
+                  or diving into Rust or AWS, I&apos;m all about building solutions that
                   make life easier and businesses thrive. Near pixel-perfect UIs, creative problem-solving,
                   and a touch of fun are my recipe for building impactful projects.
-                  Let's make something awesome together!
+                  Let&apos;s make something awesome together!
               </p>
               <SecondaryButton className="" path="/projects">
                   see my works

@@ -111,7 +111,7 @@ const Contact = () => {
                                     <label htmlFor="message">Message:</label>
                                     <textarea
                                         className="w-[250px] border-[1px] border-background p-1 rounded-md text-background bg-transparent"
-                                        name="message" id="message" cols="30" rows="5" required
+                                        name="message" id="message" cols={30} rows={5} required
                                         value={message}
                                         onChange={(e) => setMessage(e.target.value)}
                                     ></textarea>

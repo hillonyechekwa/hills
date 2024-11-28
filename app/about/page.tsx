@@ -28,7 +28,7 @@ const About = () => {
                 </section>
                 <section className="flex flex-col gap-y-5 justify-evenly items-center px-80">
                     <p className="text-wrap">
-                        I"m Hills, a software engineer from Lagos, Nigeria, specialized in building modern, user-focused
+                        I&apos;m Hills, a software engineer from Lagos, Nigeria, specialized in building modern, user-focused
                         web
                         applications. With an expertise that spans a 4 year career in building with frontend
                         technologies like React, Next.js, Astro.js alongside other top-shelf frontend tools,
@@ -36,7 +36,7 @@ const About = () => {
                         and secure solutions.
                     </p>
                     <p className="text-wrap">
-                        I've worked on impactful projects in spaces like Proptech to Logistics and Mobility.
+                        I&apos;ve worked on impactful projects in spaces like Proptech to Logistics and Mobility.
                         My skillset also includes cloud technologies like AWS, Azure DevOps, database management and
                         systems programming with Rust.
                     </p>

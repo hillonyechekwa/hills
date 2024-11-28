@@ -6,7 +6,7 @@ import avatar from '../../public/staringmaskedhill.svg'
 import {useRouter} from "next/navigation";
 
 
-export const PrimaryButton = ({children, className, type}: Readonly<{children: React.ReactNode, className?: string, type?: string}>) => {
+export const PrimaryButton = ({children, className, type}: Readonly<{children: React.ReactNode, className?: string, type?: 'button' | 'submit' | 'reset'}>) => {
     return(
         <button type={type} className={`${className} w-44 rounded-sm bg-primaryBtn text-background py-2 px-6 text-lg font-semibold capitalize`}>
             {children}
@@ -14,10 +14,10 @@ export const PrimaryButton = ({children, className, type}: Readonly<{children: R
     )
 }
 
-export const SecondaryButton = ({children, className, path, type}: Readonly<{children: React.ReactNode, className?: string, path?: string, type?: string}>) => {
+export const SecondaryButton = ({children, className, path, type}: Readonly<{children: React.ReactNode, className?: string, path?: string, type?: 'button' | 'submit' | 'reset'}>) => {
     const router = useRouter()
     return (
-        <button type={type} className={`${className}  w-44 rounded-sm bg-secondaryBtn text-background py-2 px-6 text-lg font-semibold capitalize`} onClick={() => router.push(path)}>
+        <button type={type} className={`${className}  w-44 rounded-sm bg-secondaryBtn text-background py-2 px-6 text-lg font-semibold capitalize`} onClick={() => router.push(path as string)}>
             {children}
         </button>
     )

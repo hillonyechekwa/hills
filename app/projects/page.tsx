@@ -10,8 +10,8 @@ const Projects = () => {
                 <section className="border-r-4 border-r-foreground px-10 flex flex-col gap-y-8">
                     <h1 className="text-6xl font-[family-name:var(--font-gopher-bold-sans)] ">Projects.</h1>
                     <p className="text-wrap w-72">
-                        Building software isn't just a job to me but also something I enjoy.
-                        Here are some of the projects I've built for work and to sharpen my skills,
+                        Building software isn&apos;t just a job to me but also something I enjoy.
+                        Here are some of the projects I&apos;ve built for work and to sharpen my skills,
                         ranging from backend APIs to fullstack applications and systems engineering utilities.
                     </p>
                 </section>

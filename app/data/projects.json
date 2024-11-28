@@ -1,0 +1,30 @@
+
+{
+ "data": [
+   {
+     "id": 1,
+     "title": "leaseIQ",
+     "description": "a proptech application to help renters with finding more information built with Next.js and Nest.js",
+     "repolink": "https://github.com/studioether/urban-lamp-backend",
+     "sitelink": "https://leaseiq.render.com"
+   },{
+     "id": 2,
+     "title": "lordes",
+     "description": "a platform for hairstylist to find more clients. Built also with Next.js and Nest.js",
+     "repolink": "https://github.com/studioether/urban-lamp-backend",
+     "sitelink": "https://leaseiq.render.com"
+   },{
+     "id": 3,
+     "title": "crustpiler",
+     "description": "a small compiler built in Rust",
+     "repolink": "https://github.com/studioether/crustpiler",
+     "sitelink": "https://leaseiq.render.com"
+   },{
+     "id": 4,
+     "title": "food deliver backend",
+     "description": "Backend api for food deliver startup build with Nest.js",
+     "repolink": "https://github.com/studioether/crustpiler",
+     "sitelink": "https://leaseiq.render.com"
+   }
+ ]
+}

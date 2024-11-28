@@ -3,7 +3,6 @@
 
 import Image from 'next/image';
 import avatar from '../../public/staringmaskedhill.svg'
-import {className} from "postcss-selector-parser";
 import {useRouter} from "next/navigation";
 
 

@@ -34,7 +34,11 @@ const POSTS_QUERY = `
 }
   `
 
-async function fetchPosts (query, variables){
+interface queryVars {
+    host: string;
+}
+
+async function fetchPosts (query: any, variables: queryVars){
     try{
         const response = await axios.post("https://gql.hashnode.com", {
             query,
@@ -56,6 +60,8 @@ async function fetchPosts (query, variables){
     }
 
 }
+
+
 
 
 const Blog = async () => {

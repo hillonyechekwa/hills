@@ -6,7 +6,7 @@ const notion = new Client({
 })
 
 
-export async function POST(req: NextRequest, res: NextResponse){
+export async function POST(req: NextRequest){
     try{
 
     const {name, email, purpose, message} = await req.json()

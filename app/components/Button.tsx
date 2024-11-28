@@ -15,10 +15,10 @@ export const PrimaryButton = ({children, className, type}: Readonly<{children: R
     )
 }
 
-export const SecondaryButton = ({children, className, path}: Readonly<{children: React.ReactNode, className?: string, path?: string}>) => {
+export const SecondaryButton = ({children, className, path, type}: Readonly<{children: React.ReactNode, className?: string, path?: string, type?: string}>) => {
     const router = useRouter()
     return (
-        <button className={`${className}  w-44 rounded-sm bg-secondaryBtn text-background py-2 px-6 text-lg font-semibold capitalize`} onClick={() => router.push(path)}>
+        <button type={type} className={`${className}  w-44 rounded-sm bg-secondaryBtn text-background py-2 px-6 text-lg font-semibold capitalize`} onClick={() => router.push(path)}>
             {children}
         </button>
     )

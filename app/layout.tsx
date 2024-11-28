@@ -34,6 +34,10 @@ const gopherBold = localFont({
 export const metadata: Metadata = {
   title: "Hills Onyechekwa",
   description: "Software Engineer | Technical Writer",
+    icons:{
+      icon: './favicon.ico',
+        shortcut: './favicon.ico'
+    }
 };
 
 export default function RootLayout({

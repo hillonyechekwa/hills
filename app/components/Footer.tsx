@@ -4,7 +4,7 @@ import Avatar from '../../public/staringmaskedhill.svg'
 
 const Footer = () => {
     return(
-        <footer className="w-full py-10 px-6 bg-primaryBtn text-background flex justify-between items-center font-[family-name:var(--font-gopher-sans)">
+        <footer className="w-full py-10 px-6 bg-primaryBtn text-background flex justify-between items-center font-[family-name:var(--font-gopher-sans) mt-10">
             <ul className="flex gap-x-8 text-xl font-[family-name:var(--font-gopher-bold-sans)]">
                 <li>
                     <a className="hover:text-foreground hover:underline hover:underline-offset-4" href="https://github.com/hillonyechekwa">Github</a>

@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import axios from "axios";
 import Image from "next/image";
+import hsbbanner from "../../public/hbsbanner.png"
 
 
 export const metadata = {
@@ -38,7 +39,7 @@ interface queryVars {
     host: string;
 }
 
-interface postNode{
+interface postNode {
     coverImage: {
         url: string;
     };
@@ -49,8 +50,8 @@ interface postNode{
     url: string;
 }
 
-async function fetchPosts (query: string, variables: queryVars){
-    try{
+async function fetchPosts(query: string, variables: queryVars) {
+    try {
         const response = await axios.post("https://gql.hashnode.com", {
             query,
             variables
@@ -65,12 +66,12 @@ async function fetchPosts (query: string, variables: queryVars){
         // }
 
         return response.data;
-    }catch(error:unknown){
-        if(error instanceof Error){
+    } catch (error: unknown) {
+        if (error instanceof Error) {
             console.error('graphql fetch error', error.message)
-            if('response' in error){
+            if ('response' in error) {
                 console.error('graphql fetch error', error.message ? error.message : (error as any).response?.data)
-            }else{
+            } else {
                 console.error("an unknown error occurred", error)
             }
             throw error
@@ -106,13 +107,22 @@ const Blog = async () => {
             </Hero>
             <section className="w-full h-screen grid grid-cols-3 grid-rows-2 gap-64 p-3">
                 {
-                    posts.data.publication.posts.edges.map( ({node}: {node: postNode}) => {
+                    posts.data.publication.posts.edges.map(({ node }: { node: postNode }) => {
 
-                        const url = node.coverImage.url
+                        // console.log("coverimage", node.coverImage)
+                        const coverImage = node.coverImage
+
+
 
                         return (
                             <section key={node.id} className="w-72 h-[400px]  mx-auto flex flex-col gap-y-3 p-5 bg-primaryBtn rounded-md text-background">
-                                <Image src={url} alt={node.title as string} width={250} height={100} className="rounded-md"/>
+                                {
+                                    coverImage ?
+                                        <Image src={coverImage.url} alt={node.title as string} width={250} height={100} className="rounded-md" />
+                                        :
+                                        <Image src={hsbbanner} alt={node.title as string} width={250} height={100} className="rounded-md" />
+                                }
+
                                 <a href={node.url} className="text-xl hover:underline hover:underline-offset-8">{node.title}</a>
                                 <p className="text-sm line-clamp-3">{node.brief}</p>
                                 <p>read time: {node.readTimeInMinutes} mins</p>

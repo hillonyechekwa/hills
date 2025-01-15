@@ -59,16 +59,15 @@ const Contact = () => {
                 <section className="w-full grid place-items-center">
                     <section className="w-auto p-4 rounded-lg bg-secondaryBtn text-background">
                         <ToastContainer/>
-                        <form onSubmit={handleSubmit} className="flex gap-y-5 justify-evenly">
+                        <form onSubmit={handleSubmit} className="grid grid-cols-2 grid-rows-1 gap-y-5 justify-evenly">
                             <header className="w-full">
-                                <Image src={Hillsprofile} alt="a profile burst image of hills" width={400}
-                                       height={200}/>
+                                <Image src={Hillsprofile} alt="a profile burst image of hills" className="w-[200px] md:w-[300px] lg:w-[400px]"/>
                             </header>
                             <section className="flex flex-col gap-y-8 p-5 justify-evenly">
                                 <div className="flex gap-x-3 w-full justify-evenly items-center">
                                     <label htmlFor="name">Full Name: </label>
                                     <input
-                                        className="w-[250px] border-[1px] p-1 rounded-md border-background text-background  bg-transparent"
+                                        className="lg:w-[200px] xl:w-[250px] border-[1px] p-1 rounded-md border-background text-background  bg-transparent"
                                         type="text" id="name" name="name" required
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
@@ -77,7 +76,7 @@ const Contact = () => {
                                 <div className="w-full flex justify-evenly items-center">
                                     <label htmlFor="email">Email: </label>
                                     <input
-                                        className="w-[250px] border-[1px] border-background ml-8 p-1 rounded-md text-background bg-transparent "
+                                        className="lg:w-[200px] xl:w-[250px] border-[1px] border-background ml-8 p-1 rounded-md text-background bg-transparent "
                                         type="email" id="email" name="email" required
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
@@ -86,7 +85,7 @@ const Contact = () => {
                                 <div className="w-full flex gap-x-3 justify-evenly items-center">
                                     <label htmlFor="purpose">Purpose:</label>
                                     <select
-                                        className="w-[250px] border-[1px] border-background p-1 rounded-md text-background bg-transparent"
+                                        className="lg:w-[200px] xl:w-[250px] border-[1px] border-background p-1 rounded-md text-background bg-transparent"
                                         name="purpose" id="purpose" required
                                         value={purpose}
                                         onChange={(e) => setPurpose(e.target.value)}
@@ -110,7 +109,7 @@ const Contact = () => {
                                 <div className="w-full flex gap-x-3 items-center justify-evenly">
                                     <label htmlFor="message">Message:</label>
                                     <textarea
-                                        className="w-[250px] border-[1px] border-background p-1 rounded-md text-background bg-transparent"
+                                        className="lg:w-[200px] xl:w-[250px] border-[1px] border-background p-1 rounded-md text-background bg-transparent"
                                         name="message" id="message" cols={30} rows={5} required
                                         value={message}
                                         onChange={(e) => setMessage(e.target.value)}

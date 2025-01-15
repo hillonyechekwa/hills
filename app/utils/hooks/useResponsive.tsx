@@ -1,7 +1,7 @@
 
 'use client';
 
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useCallback} from 'react';
 
 const useResponsive = (query: string): boolean => {
     const getMatches = (query: string) : boolean => {
@@ -14,9 +14,9 @@ const useResponsive = (query: string): boolean => {
 
     const [matches, setMatches] = useState<boolean>(getMatches(query))
 
-    function handleChange() {
+    const handleChange = useCallback(() => {
         setMatches(getMatches(query))
-    }
+    }, [query])
 
     useEffect(() => {
         const matchMedia = window.matchMedia(query);

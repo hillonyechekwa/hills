@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Nav from "@/components/Nav"
 import Footer from "@/components/Footer"
-import {ThemeProvider} from "@/utils/ThemeProvider"
+import { ThemeProvider } from "@/utils/ThemeProvider"
 import ThemeToggle from "@/utils/ThemeToggle";
 import "./globals.css";
 import React from "react";
@@ -26,37 +26,37 @@ const gopher = localFont({
 })
 
 const gopherBold = localFont({
-    src: "./fonts/GopherText-Bold.woff2",
-    variable: "--font-gopher-bold-sans",
-    weight: "100 900"
+  src: "./fonts/GopherText-Bold.woff2",
+  variable: "--font-gopher-bold-sans",
+  weight: "100 900"
 })
 
 export const metadata: Metadata = {
   title: "Hills Onyechekwa",
   description: "Software Engineer | Technical Writer",
-    icons:{
-      icon: './favicon.ico',
-        shortcut: './favicon.ico'
-    }
+  icons: {
+    icon: './favicon.ico',
+    shortcut: './favicon.ico'
+  }
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{
-    children: React.ReactNode,
+  children: React.ReactNode,
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${gopher.variable} ${gopherBold.variable} antialiased relative`}>
-      <ThemeProvider>
-      <Nav />
-      <main className="container relative z-10">
-          <ThemeToggle />
-        {children}
-      </main>
-      <Footer />
-      </ThemeProvider>
+        className={`${gopher.variable} ${gopherBold.variable} antialiased h-full flex flex-col relative`}>
+        <ThemeProvider>
+          <Nav />
+          <main className="relative flex-1 pb-64 md:pb-52 lg:pb-36">
+            <ThemeToggle />
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

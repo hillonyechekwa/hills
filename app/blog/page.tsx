@@ -93,11 +93,11 @@ const Blog = async () => {
     return (
         <main className="grid grid-rows-[1fr] items-center justify-items-center min-h-screen pb-20 font-[family-name:var(--font-gopher-sans)]">
             <Hero>
-                <section className="border-r-4 border-r-foreground px-28">
-                    <h1 className="text-6xl font-[family-name:var(--font-gopher-bold-sans)]">Blog.</h1>
+                <section className="md:border-r-4 md:border-r-foreground md:px-20 lg:px-28 relative top-32 md:top-0">
+                    <h1 className="text-3xl md:text-6xl font-[family-name:var(--font-gopher-bold-sans)]">Blog.</h1>
                 </section>
-                <section className="px-72 flex justify-center items-center">
-                    <p className="text-wrap">
+                <section className="px-24 lg:px-72 flex justify-center items-center">
+                    <p className="text-xs md:text-sm text-wrap">
                         When I&apos;m not coding, I write technical articles
                         where I document How-tos, my personal projects
                         and new complex technical concepts I come across as
@@ -105,7 +105,7 @@ const Blog = async () => {
                     </p>
                 </section>
             </Hero>
-            <section className="w-full h-screen grid grid-cols-3 grid-rows-2 gap-64 p-3">
+            <section className="w-auto h-auto lg:h-screen grid grid-cols-1 auto-rows-auto md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-y-6 md:gap-x-8 md:gap-y-5 lg:gap-64 p-0 md:p-0 lg:p-3 mt-10 md:mt-0">
                 {
                     posts.data.publication.posts.edges.map(({ node }: { node: postNode }) => {
 
@@ -115,7 +115,7 @@ const Blog = async () => {
 
 
                         return (
-                            <section key={node.id} className="w-72 h-[400px]  mx-auto flex flex-col gap-y-3 p-5 bg-primaryBtn rounded-md text-background">
+                            <section key={node.id} className="w-52 md:w-72 h-[400px]  mx-auto flex flex-col gap-y-3 p-5 bg-primaryBtn rounded-md text-background">
                                 {
                                     coverImage ?
                                         <Image src={coverImage.url} alt={node.title as string} width={250} height={100} className="rounded-md" />

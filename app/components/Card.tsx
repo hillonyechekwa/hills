@@ -3,7 +3,7 @@ import {CurlyBraces, Globe} from "lucide-react";
 
 const Card = ({title, description, repolink, sitelink}:{title: string, description: string, repolink: string, sitelink?: string}) => {
     return(
-        <div className="rounded-lg w-58 md:w-48 lg:w-60 xl:w-80 h-auto p-5 md:p-3 flex lg:flex-col justify-evenly items-start gap-y-3 bg-primaryBtn text-background">
+        <div className="rounded-lg w-44 md:w-48 lg:w-60 xl:w-80 h-auto p-5 md:p-3 flex flex-col justify-evenly items-start gap-y-3 bg-primaryBtn text-background">
             <section>
                 <h4 className="text-xl md:text-2xl capitalize">{title}</h4>
                 <p className="text-xs lg:text-sm line-clamp-2 md:line-clamp-3 lg:line-clamp-none">{description}</p>

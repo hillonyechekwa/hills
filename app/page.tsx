@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className="w-full grid grid-rows-[1fr] items-center justify-items-center min-h-screen pb-20 font-[family-name:var(--font-gopher-sans)]">
        <Hero>
-          <section className="">
-              <h1 className="flex flex-col text-2xl md:text-4xl lg:text-5xl xl:text-8xl font-[family-name:var(--font-gopher-bold-sans)] border-r-0 md:border-r-4 md:border-foreground py-4 px-28 relative top-10 md:top-0">
+          <section className="w-auto">
+              <h1 className="flex flex-col text-2xl md:text-4xl lg:text-5xl xl:text-8xl font-[family-name:var(--font-gopher-bold-sans)] border-r-0 md:border-r-4 md:border-foreground py-4 px-0 md:px-28 relative top-10 md:top-0">
                   <span className="">Hill</span>
                   <span>Onyechekwa.</span>
               </h1>

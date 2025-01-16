@@ -31,11 +31,11 @@ const SkillsPage = () => {
     return (
         <main className="grid grid-rows-[1fr] items-center justify-items-center min-h-screen pb-20 font-[family-name:var(--font-gopher-sans)]">
             <Hero>
-                <section className="border-r-4 border-r-foreground px-20">
-                    <h1 className="text-6xl font-[family-name:var(--font-gopher-bold-sans)]">Skills.</h1>
+                <section className="md:border-r-4 md:border-r-foreground px-5 md:px-20">
+                    <h1 className="text-4xl md:text-6xl font-[family-name:var(--font-gopher-bold-sans)]">Skills.</h1>
                 </section>
                 <section className="w-full grid place-items-center">
-                    <section className="flex flex-col h-56 gap-y-6 w-60 overflow-y-scroll rounded-md p-3 border-2 border-primaryBtn scroll-y-contain">
+                    <section className="flex flex-col h-56 gap-y-6 w-48 md:w-60 overflow-y-scroll rounded-md p-3 border-2 border-primaryBtn scroll-y-contain">
                     {
                         skillsArr.map((skill, i) => {
                             return (

@@ -15,8 +15,8 @@ const About = () => {
     return (
         <main className="grid grid-rows-[1fr] items-center justify-items-center min-h-screen mb-48 font-[family-name:var(--font-gopher-sans)]">
             <Hero>
-                <section className="md:border-r-4 border-foreground px-28 h-full flex justify-center items-center">
-                    <h1 className="text-4xl md:text-6xl font-[family-name:var(--font-gopher-bold-sans)] ">
+                <section className="relative top-10 md:top-0 md:border-r-4 border-foreground px-28 h-full flex justify-center items-center">
+                    <h1 className="text-3xl md:text-6xl font-[family-name:var(--font-gopher-bold-sans)] ">
                         Get to know Me.
                     </h1>
                 </section>

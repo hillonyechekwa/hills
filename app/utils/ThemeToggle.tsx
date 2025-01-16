@@ -21,7 +21,7 @@ const ThemeToggle = () => {
 
 
    if(resolvedTheme === 'dark') {
-       return <IconButton onClick={() => setTheme('light')} className="absolute left-1/2 md:left-3/4 top-6 ml-0 md:ml-36 hover:bg-secondaryBtn hover:text-background z-20">
+       return <IconButton onClick={() => setTheme('light')} className="absolute left-1/2 md:left-3/4 top-6 ml-0 md:ml-32 hover:bg-secondaryBtn hover:text-background z-20">
            <SunIcon />
        </IconButton>
    }

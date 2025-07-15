@@ -2,7 +2,7 @@
 'use client'
 
 import Image from 'next/image';
-import avatar from '../../public/staringmaskedhill.svg'
+import avatar from '@/public/staringmaskedhill.svg'
 import {useRouter} from "next/navigation";
 
 

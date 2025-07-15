@@ -17,19 +17,19 @@ const Projects = () => {
                 </section>
                 <section className="grid place-items-center w-full p-8 md:p-2">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid-rows-1 md:grid-rows-2 gap-4">
-                    {
-                        ProjectsData.data.map(project => {
-                            return (
-                                <Card
-                                    key={project.id}
-                                    title={project.title}
-                                    description={project.description}
-                                    repolink={project.repolink}
-                                    sitelink={project.sitelink}
-                                />
-                            )
-                        })
-                    }
+                        {
+                            ProjectsData.data.map(project => {
+                                return (
+                                    <Card
+                                        key={project.id}
+                                        title={project.title}
+                                        description={project.description}
+                                        repolink={project.repolink}
+                                        sitelink={project.sitelink}
+                                    />
+                                )
+                            })
+                        }
                     </div>
                 </section>
             </Hero>

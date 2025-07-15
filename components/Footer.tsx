@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import Avatar from '../../public/staringmaskedhill.svg';
+import Avatar from '@/public/staringmaskedhill.svg';
 
 const Footer = () => {
     return(

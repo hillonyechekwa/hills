@@ -2,12 +2,12 @@
 
 
 import Hero from "@/components/Hero";
-import {useState} from "react";
-import {toast, ToastContainer} from "react-toastify";
+import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.min.css'
 import Image from "next/image";
 import Hillsprofile from "@/public/profile-img.jpg";
-import {PrimaryButton} from "@/components/Button";
+import { PrimaryButton } from "@/components/Button";
 
 
 
@@ -19,8 +19,8 @@ const Contact = () => {
     const [message, setMessage] = useState("");
 
 
-   async function handleSubmit (e: React.FormEvent) {
-        try{
+    async function handleSubmit(e: React.FormEvent) {
+        try {
             e.preventDefault();
             const formData = {
                 name,
@@ -38,10 +38,10 @@ const Contact = () => {
 
             const result = await res.json()
 
-            if(result.success){
-                toast("Thank you for contacting me", {type: "success"})
-            }else{
-                toast("please check your inputs", {type: "error"})
+            if (result.success) {
+                toast("Thank you for contacting me", { type: "success" })
+            } else {
+                toast("please check your inputs", { type: "error" })
             }
         } catch (error) {
             console.error('Submission Error', error);
@@ -50,18 +50,18 @@ const Contact = () => {
 
 
 
-    return(
+    return (
         <main className="grid grid-rows-[1fr] items-center justify-items-center min-h-screen pb-20 font-[family-name:var(--font-gopher-sans)]">
             <Hero>
                 <section className="md:border-r-4 md:border-r-foreground px-10">
-                    <h1  className="text-2xl lg:text-4xl xl:text-6xl font-[family-name:var(--font-gopher-bold-sans)]">What can I do for your business?</h1>
+                    <h1 className="text-2xl lg:text-4xl xl:text-6xl font-[family-name:var(--font-gopher-bold-sans)]">What can I do for your business?</h1>
                 </section>
                 <section className="w-full grid place-items-center md:p-10">
                     <section className="w-auto h-[500px] lg:h-auto p-0 md:p-4 rounded-lg bg-secondaryBtn text-background">
-                        <ToastContainer/>
+                        <ToastContainer />
                         <form onSubmit={handleSubmit} className="grid grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 gap-y-5 justify-evenly items-center">
                             <header className="w-full hidden lg:block">
-                                <Image src={Hillsprofile} alt="a profile burst image of hills" className="w-[200px] lg:w-[600px] rounded-md mx-auto"/>
+                                <Image src={Hillsprofile} alt="a profile burst image of hills" className="w-[200px] lg:w-[600px] rounded-md mx-auto" />
                             </header>
                             <section className="flex flex-col gap-y-8 p-5 justify-evenly">
                                 <div className="flex gap-x-3 w-full justify-evenly items-center">
@@ -91,18 +91,18 @@ const Contact = () => {
                                         onChange={(e) => setPurpose(e.target.value)}
                                     >
                                         <option className="text-background bg-foreground" value={""}
-                                                defaultValue="Select One" disabled>Select One
+                                            defaultValue="Select One" disabled>Select One
                                         </option>
                                         <option className="text-background bg-foreground"
-                                                value="recruitment/contract hire">Recruitment/Contract Hire
+                                            value="recruitment/contract hire">Recruitment/Contract Hire
                                         </option>
                                         <option className="text-background bg-foreground"
-                                                value="collaboration">Collaboration
+                                            value="collaboration">Collaboration
                                         </option>
                                         <option className="text-background bg-foreground" value="question">Question
                                         </option>
                                         <option className="text-background bg-foreground"
-                                                value="feedback/message">Feedback/Message
+                                            value="feedback/message">Feedback/Message
                                         </option>
                                     </select>
                                 </div>

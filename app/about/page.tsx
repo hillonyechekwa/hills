@@ -1,11 +1,11 @@
 import Hero from "@/components/Hero";
 import Image from "next/image";
-import Headshot from "../../public/hillsheadshot.jpg";
-import Unaware from "../../public/hillsatdevfest.jpg"
-import NotionFace from "../../public/my-notion-face-portrait.png"
-import NoBgNotionFace from "../../public/my-notion-face-transparent.png"
+import Headshot from "@/public/hillsheadshot.jpg";
+import Unaware from "@/public/hillsatdevfest.jpg"
+import NotionFace from "@/public/my-notion-face-portrait.png"
+import NoBgNotionFace from "@/public/my-notion-face-transparent.png"
 
-export const  metadata = {
+export const metadata = {
     title: "About | Hill Onyechekwa",
 }
 
@@ -25,7 +25,7 @@ const About = () => {
                 </section>
             </Hero>
             <section className="flex flex-col justify-around items-center w-full h-screen gap-y-5 px-6">
-                
+
                 <section className="flex flex-col gap-y-5 justify-evenly items-center px-8 md:px-48 lg:px-80">
                     <p className="text-wrap md:text-center lg:text-left">
                         I&apos;m Hills, a software engineer from Lagos, Nigeria, specialized in building modern, user-focused
@@ -48,7 +48,7 @@ const About = () => {
                 </section>
 
                 {/* <section className="flex justify-center items-center"> */}
-                    <Image src={Unaware} alt="an unaware shot of me from devfest lagos 2024" className="w-150px md:w-[300px] lg:w-[5 00px] mb-20"/>
+                <Image src={Unaware} alt="an unaware shot of me from devfest lagos 2024" className="w-150px md:w-[300px] lg:w-[5 00px] mb-20" />
                 {/* </section> */}
             </section>
         </main>

@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import axios from "axios";
 import Image from "next/image";
-import hsbbanner from "../../public/hbsbanner.png"
+import hsbbanner from "@/public/hbsbanner.png"
 
 
 export const metadata = {
